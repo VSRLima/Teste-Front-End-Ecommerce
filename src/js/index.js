@@ -1,3 +1,1 @@
-import '../scss/index.scss';
-
-import './blinkers';
+import './Components/index/indexForm';

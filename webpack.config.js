@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-        index: './src/js/index.js',
-        forceHome: './src/js/force-home.js'
+        home: './src/js/home.js',
+        index: './src/js/index.js'
         /**
          * Registre aqui um JS para importar em 'chunks' no HtmlWebpackPlugin
          * 
@@ -15,17 +15,18 @@ module.exports = {
     devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/pages/index.html',
-            inject: true,
-            chunks: ['index', 'forceHome'],
-            filename: 'index.html'
-        }),
-        new HtmlWebpackPlugin({
             template: './src/pages/home.html',
             inject: true,
-            chunks: ['index'],
+            chunks: ['home'],
             filename: 'home.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/index.html',
+            inject: true,
+            chunks: ['index'],
+            filename: 'index.html'
         })
+        
         /**
          * Para adicionar mais páginas, basta copiar a declaração do HtmlWebpackPlugin acima,
          * alterar o template e o filename.

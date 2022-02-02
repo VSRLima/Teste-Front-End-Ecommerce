@@ -1,13 +1,13 @@
 (() => {
     function blink(element) {
         window.setInterval(() => {
-            if (element.style.display != 'none') {
-                element.style.display = 'none';
+            if (element.style.visibility != 'hidden') {
+                element.style.visibility = 'hidden';
             }
             else {
-                element.style.display = 'initial';
+                element.style.visibility = 'visible';
             }
-        }, 500);
+        }, 700);
     }
 
     function init() {
