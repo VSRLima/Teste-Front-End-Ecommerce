@@ -1,0 +1,30 @@
+
+main .formDiv{
+    margin-top: 76px;
+    h1 {
+        text-align: center;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .mdc-text-field--filled {
+            width: 50%;
+            margin-top: 10px;
+        }
+        
+        button {
+            margin-top: 10px;
+        }
+    }
+}
+
+// @media (max-width: 750) {
+//     main .formDiv form .mdc-text-field--filled {
+         
+//         width: 90%;
+        
+//     }
+// }
