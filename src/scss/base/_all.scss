@@ -1,10 +1,22 @@
 @use "@material/theme" with (
   $primary: #f15725,
-  $on-primary: #425e50
+  $on-primary: white
 );
+@use "@material/checkbox";
+@use "@material/data-table/data-table";
 @use "@material/icon-button";
 @use "@material/top-app-bar/mdc-top-app-bar";
 @use "@material/button/styles";
+@use "@material/card";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@include textfield.core-styles;
+@include card.core-styles;
+@include checkbox.core-styles;
+@include data-table.core-styles;
+@include data-table.theme-baseline;
 
 @import 'swiper/css';
 @import 'swiper/css/navigation';
@@ -13,6 +25,7 @@
 @import "fonts";
 @import "titles";
 @import "home";
+@import "index";
 @import 'swiper/css/bundle';
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&display=swap');
 
@@ -25,16 +38,26 @@
 
 body {
     color: #191919;
+    background-color: #5c7d6c;
 }
 
 main {
   margin-left: 100px;
   margin-right: 100px;
+  padding: 10px;
+  background-color: white;
+  border: 5px solid #f15725;
 }
 
 @media (max-width: 600px) {
   main {
     margin-left: 70px;
     margin-right: 70px;
+  }
+}
+
+@media (max-width: 800px) {
+  main .formDiv form .mdc-text-field--filled {    
+    width: 90%;
   }
 }

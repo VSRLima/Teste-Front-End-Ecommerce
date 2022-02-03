@@ -4,7 +4,9 @@ module.exports = {
     mode: 'development',
     entry: {
         home: './src/js/home.js',
-        index: './src/js/index.js'
+        index: './src/js/index.js',
+        indexedDB: './src/js/Utils/indexedDb.js',
+        forcehome: './src/js/force-home.js'
         /**
          * Registre aqui um JS para importar em 'chunks' no HtmlWebpackPlugin
          * 
@@ -17,13 +19,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/pages/home.html',
             inject: true,
-            chunks: ['home'],
+            chunks: ['home','indexedDB'],
             filename: 'home.html'
         }),
         new HtmlWebpackPlugin({
             template: './src/pages/index.html',
             inject: true,
-            chunks: ['index'],
+            chunks: ['index', 'forcehome'],
             filename: 'index.html'
         })
         

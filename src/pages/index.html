@@ -7,14 +7,55 @@
     <title>Index</title>
 </head>
 <body>
-    <a href="home.html">SLA</a>
-    <form action="">
-        <label class="mdc-text-field mdc-text-field--filled">
-            <span class="mdc-text-field__ripple"></span>
-            <span class="mdc-floating-label" id="my-label-id">Hint text</span>
-            <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
-            <span class="mdc-line-ripple"></span>
-          </label>
-    </form>
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed-adjust">
+        <div class="mdc-top-app-bar__row">
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <a href="home.html"><img src="../images/squirrel_logo.jpg" alt="Squirrel Logo"></a>
+            <h1>
+                Fale Conosco
+            </h1>
+          </section>
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <button class="mdc-button mdc-button--raised">
+                <a href="home.html">Voltar</a>
+              </button>
+          </section>
+        </div>
+      </header>
+      <main class="mdc-top-app-bar--fixed-adjust">
+          <div class="formDiv">
+            <h1>Preencha o Formulário abaixo</h1>
+            <form action="" id="form">
+                <label class="mdc-text-field mdc-text-field--filled" name="teste">
+                    <span class="mdc-text-field__ripple"></span>
+                    <span class="mdc-floating-label" id="nome" >Nome</span>
+                    <input class="mdc-text-field__input" type="text" aria-labelledby="nome" required>
+                    <span class="mdc-line-ripple"></span>
+                </label>
+                <label class="mdc-text-field mdc-text-field--filled">
+                    <span class="mdc-text-field__ripple"></span>
+                    <span class="mdc-floating-label" id="email">Email</span>
+                    <input class="mdc-text-field__input" type="text" aria-labelledby="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required>
+                    <span class="mdc-line-ripple"></span>
+                </label>
+                <label class="mdc-text-field mdc-text-field--filled">
+                    <span class="mdc-text-field__ripple"></span>
+                    <span class="mdc-floating-label" id="telefone">Telefone</span>
+                    <input class="mdc-text-field__input" type="text" aria-labelledby="telefone" pattern="[0-9]{10,11}" required>
+                    <span class="mdc-line-ripple"></span>
+                </label>
+                <label class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field">
+                    <span class="mdc-text-field__ripple"></span>
+                    <span class="mdc-floating-label" id="message">Messagem</span>
+                    <textarea class="mdc-text-field__input" rows="8" cols="40" aria-label="Label" id="inputValue"></textarea>
+                    <span class="mdc-line-ripple"></span>
+                </label> 
+
+                <button class="mdc-button mdc-button--raised" type="submit" id="btnSubmit">
+                    Enviar
+                </button>
+            </form>
+          </div>
+      </main>
 </body>
 </html>

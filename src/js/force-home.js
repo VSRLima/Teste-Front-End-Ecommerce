@@ -1,5 +1,5 @@
 (() => {
-    // if (window.location.pathname != '/home.html') {
-    //     window.location = 'home.html';
-    // }
+    if (window.location.pathname == '/') {
+        window.location = 'home.html';
+    }
 })();
